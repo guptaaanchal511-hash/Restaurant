@@ -1,0 +1,12 @@
+var mysql = require('mysql');
+var pool = mysql.createPool({
+    host: '127.0.0.1',
+    port: 3306,
+    user: 'root',
+    password: 'Vaishu@11',
+    database: 'restaurant',
+    multipleStatements: true,
+    connectionLimit: 100
+});
+
+module.exports = pool;
